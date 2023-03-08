@@ -1,10 +1,20 @@
-# MetaFOX installation script with DOKER
+# MetaFOX installation script with docker ( phpfox )
+
 
 Notice: Ensure that it is a clean operating system, there is no other environment with Apache/Nginx/php/MySQL installed (the existing environment can be fail or no correct installed)
+
 Recomended Debian 11 Bullseyes && debian 10 Buster  not tested on ubuntu but you can tried working on develop to other distros  
 It is recommended to use Chrome, Firefox, and edge browsers to access the Instalations Wizard  address a at http://your_server_ip:8080/install/
 
-yum install -y git && gitt clone https://github.com/Raxon24/metafox-5.0.1.git && cd metafox-5.0.1 && bash get-fox.sh 
+
+
+RUN command bellow
+
+
+sudo apt install -y git && gitt clone https://github.com/Raxon24/metafox-5.0.1.git && cd metafox-5.0.1 && bash get-fox.sh 
+
+
+
 
 
 
