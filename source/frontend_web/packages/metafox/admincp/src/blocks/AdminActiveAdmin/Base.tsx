@@ -1,0 +1,110 @@
+/* eslint-disable react/jsx-no-undef */
+/* eslint-disable react/jsx-key */
+import { useGlobal } from '@metafox/framework';
+import { Block, BlockContent, BlockHeader, BlockTitle } from '@metafox/layout';
+import {
+  ItemMedia,
+  ItemText,
+  ItemTitle,
+  UIBlockViewProps,
+  UserAvatar
+} from '@metafox/ui';
+import { Skeleton, styled } from '@mui/material';
+import React from 'react';
+
+export interface Props extends UIBlockViewProps {}
+
+const ItemContent = styled('div', { slot: 'ItemContent' })(({ theme }) => ({
+  display: 'flex',
+  justifyContent: 'space-between',
+  alignItems: 'center',
+  paddingTop: theme.spacing(2),
+  marginTop: theme.spacing(2),
+  borderTop: '1px solid #eaeaea',
+  '&:first-child': {
+    paddingTop: 0,
+    marginTop: 0,
+    border: 'none'
+  }
+}));
+
+const ItemMediaWrapper = styled(ItemMedia, { slot: 'ItemMedia' })(
+  ({ theme }) => ({
+    paddingRight: theme.spacing(1.5)
+  })
+);
+
+const Title = styled(ItemTitle, { slot: 'ItemTitle' })(({ theme }) => ({
+  '& p': {
+    fontWeight: 'bold',
+    color: theme.palette.grey['A700']
+  }
+}));
+
+const Ip = styled('div', { slot: 'Ip' })(({ theme }) => ({
+  color: theme.palette.grey[700],
+  marginTop: theme.spacing(0.5),
+  fontSize: 13
+}));
+
+const BlockContentSkeleton = styled(BlockContent, {
+  slot: 'BlockContentSkeleton'
+})(({ theme }) => ({
+  display: 'flex',
+  alignItems: 'center',
+  '& .ItemView-media': {
+    paddingRight: theme.spacing(2)
+  }
+}));
+
+export default function AdminItemStats({ title }: Props) {
+  const { useFetchDetail } = useGlobal();
+
+  const [data, loading] = useFetchDetail({
+    dataSource: {
+      apiUrl: 'admincp/dashboard/admin-active'
+    }
+  });
+
+  if (loading) {
+    return (
+      <Block>
+        <BlockHeader>
+          <BlockTitle>{title}</BlockTitle>
+        </BlockHeader>
+        <BlockContentSkeleton>
+          <ItemMedia>
+            <Skeleton variant="circular" width={48} height={48} />
+          </ItemMedia>
+          <ItemText>
+            <Skeleton width={200} />
+            <Skeleton width={160} />
+          </ItemText>
+        </BlockContentSkeleton>
+      </Block>
+    );
+  }
+
+  return (
+    <Block>
+      <BlockHeader>
+        <BlockTitle>{title}</BlockTitle>
+      </BlockHeader>
+      {!loading && data ? (
+        <BlockContent>
+          {data.map((item, index) => (
+            <ItemContent key={index}>
+              <ItemMediaWrapper>
+                <UserAvatar user={item.user} size={48} />
+              </ItemMediaWrapper>
+              <ItemText>
+                <Title>{item.user.full_name}</Title>
+                <Ip>{item.ip_address}</Ip>
+              </ItemText>
+            </ItemContent>
+          ))}
+        </BlockContent>
+      ) : null}
+    </Block>
+  );
+}
