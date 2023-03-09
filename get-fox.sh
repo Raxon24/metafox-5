@@ -44,11 +44,11 @@ then
   cp ./docker/server.env.sample ./docker/server.env
 fi
 
-docker compose up -d
+sudo docker compose up -d
 
 # Install frented
 
-docker compose exec frontend-build yarn bundle:release
+sudo docker compose exec frontend-build yarn bundle:release
 
 if [[ -d ./source/frontend_web/app/dist ]] 
 then
@@ -60,7 +60,11 @@ fi
 
 cat ./docker/server.env
 
-cat wellcome.md
+cat wellcome.md && cd ..
+
+sudo rm -r metafox-5.0.1  systemctl reboot
+
+
 
 
 
