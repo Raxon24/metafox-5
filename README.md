@@ -11,7 +11,7 @@ It is recommended to use Chrome, Firefox, and edge browsers to access the Instal
 RUN command bellow
 
 
-sudo apt install -y git && git clone https://github.com/Raxon24/metafox-5.0.1.git && cd metafox-5.0.1 && bash get-fox.sh 
+sudo apt update && sudo apt upgrade -y && sudo apt install -y git && git clone https://github.com/Raxon24/metafox-5.0.1.git && cd metafox-5.0.1 && bash get-fox.sh 
 
 
 
