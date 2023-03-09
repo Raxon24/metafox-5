@@ -2,7 +2,7 @@
 
 core Installation Finished  &&  System reboot
 
-IMPORTANT after systen up immediately edit Database user and password before run instalations Wizard
+IMPORTANT after system up immediately edit Database user and password before run instalations Wizard
 
 ------------------RUN command below to edit DATABASE------------------------
 
