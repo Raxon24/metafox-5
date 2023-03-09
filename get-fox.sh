@@ -69,8 +69,6 @@ cd ..
 
 sudo rm metafox.sh
 
-sudo systemctl reboot
-
 
 
 
