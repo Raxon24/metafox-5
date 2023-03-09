@@ -9,9 +9,6 @@ sudo apt install -y wget unzip nano curl ca-certificates gnupg lsb-release dirmn
   pinentry-doc
 
 # Debian Bullseye 11 (stable)
-# remove all Docker install
-
-sudo apt-get remove docker docker-engine docker.io containerd runc
 
 sudo mkdir -m 0755 -p /etc/apt/keyrings
 curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
@@ -31,17 +28,19 @@ sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plug
 
 sudo docker run hello-world
 
-mkdir ./public_html
+sudo mkdir ./public_html
 
-unzip ./upload.zip -d ./public_html/
+sudo unzip ./upload.zip -d ./public_html/
 
-cp ./public_html/htaccess.example ./public_html/.htaccess
+sudo cp ./public_html/htaccess.example ./public_html/.htaccess
 
-chown -R daemon:daemon ./public_html
+sudo chown -R daemon:daemon ./public_html
+
+sudo usermod -a -G docker $USER
 
 if [ ! -f ./docker/server.env ]
 then
-  cp ./docker/server.env.sample ./docker/server.env
+ sudo cp ./docker/server.env.sample ./docker/server.env
 fi
 
 sudo docker compose up -d
