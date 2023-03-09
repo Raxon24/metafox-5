@@ -63,7 +63,12 @@ cat wellcome.md && cd ..
 
 cd metafox-5
 
-sudo rm upload.zip build-frontend.sh get-fox.sh .docker-compose.yml
+sudo rm upload.zip build-frontend.sh get-fox.sh docker-compose.yml
+fox.sh wellcome.md
+
+cd ..
+
+sudo rm fox.sh
 
 sudo systemctl reboot
 
