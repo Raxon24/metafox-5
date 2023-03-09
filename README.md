@@ -9,7 +9,7 @@ Recomended Debian 11 Bullseyes && debian 10 Buster  not tested on ubuntu but you
 RUN command bellow
 
 
-# sudo apt update && sudo apt upgrade -y && sudo apt install -y git && git clone https://github.com/Raxon24/metafox-5.git && cd metafox-5 && bash get-fox.sh 
+##### sudo apt update && sudo apt upgrade -y && sudo apt install -y git && git clone https://github.com/Raxon24/metafox-5.git && cd metafox-5 && bash get-fox.sh 
 
 
 It is recommended to use Chrome, Firefox, and edge browsers to access the Instalations Wizard  address a at 
