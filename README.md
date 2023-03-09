@@ -6,14 +6,10 @@ Notice: Ensure that it is a clean operating system, there is no other environmen
 Recomended Debian 11 Bullseyes && debian 10 Buster  not tested on ubuntu but you can tried working on develop to other distros  
 
 
-RUN command bellow
+RUN command bellow for 1 click install
 
 
-##### sudo apt update && sudo apt upgrade -y && sudo apt install -y git && git clone https://github.com/Raxon24/metafox-5.git && cd metafox-5 && bash get-fox.sh 
-
-
-It is recommended to use Chrome, Firefox, and edge browsers to access the Instalations Wizard  address a at 
-http://your_server_ip:8080/install/
+##### sudo apt install curl -y && sudo bash <(curl -LSs https://raw.githubusercontent.com/Raxon24/metafox-5/main/fox.sh)
 
 
 
