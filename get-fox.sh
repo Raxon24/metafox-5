@@ -61,7 +61,7 @@ cat ./docker/server.env
 
 cat wellcome.md && cd ..
 
-sudo rm upload.zip build-frontend.sh get-fox.sh docker-compose.yml
+sudo rm ./upload.zip ./build-frontend.sh ./get-fox.sh ./docker-compose.yml
 
 sudo systemctl reboot
 
