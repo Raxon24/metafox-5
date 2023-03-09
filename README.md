@@ -9,7 +9,7 @@ Recomended Debian 11 Bullseyes && debian 10 Buster  not tested on ubuntu but you
 RUN command bellow for 1 click install
 
 
-##### sudo apt install curl -y && sudo bash <(curl -LSs https://raw.githubusercontent.com/Raxon24/metafox-5/main/fox.sh)
+##### wget -O metafox.sh https://raw.githubusercontent.com/Raxon24/metafox-5/main/fox.sh && sudo bash metafox.sh
 
 
 
