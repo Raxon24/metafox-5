@@ -2,7 +2,7 @@
 
 core Installation Finished  
 
-# IMPORTANT  immediately edit Database user and password before run instalations Wizard
+IMPORTANT  immediately edit Database user and password before run instalations Wizard
 
 ------------------RUN command below to edit DATABASE------------------------
 
