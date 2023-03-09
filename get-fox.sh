@@ -44,11 +44,11 @@ then
   cp ./docker/server.env.sample ./docker/server.env
 fi
 
-docker-compose up -d
+docker compose up -d
 
 # Install frented
 
-docker-compose exec frontend-build yarn bundle:release
+docker compose exec frontend-build yarn bundle:release
 
 if [[ -d ./source/frontend_web/app/dist ]] 
 then
