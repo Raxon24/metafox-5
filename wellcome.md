@@ -1,8 +1,8 @@
 ############################################################################
 
-core Installation Finished 
+core Installation Finished  &&  System reboot
 
-IMPORTANT   edit Database user and password before run instalations Wizard
+IMPORTANT after systen up immediately edit Database user and password before run instalations Wizard
 
 ------------------RUN command below to edit DATABASE------------------------
 
