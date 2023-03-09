@@ -16,10 +16,12 @@ RUN command bellow for 1 click install
 
 
 
-############################ Developers Instalations Guide ################################################
 
 
-# Installation Guide
+
+
+
+# Developers Installation Guide
 MetaFox supports Installation Wizard so the installation can be done easily with a few clicks. This guide will guide you to install MetaFox site on either hosting or Docker.
 
 Before getting started, we assume that you have downloaded the MetaFox package (zip file) and extracted it to the `/path/to/metafox` folder on your local machine. 
