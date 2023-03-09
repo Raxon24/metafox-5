@@ -36,7 +36,7 @@ sudo cp ./public_html/htaccess.example ./public_html/.htaccess
 
 sudo chown -R daemon:daemon ./public_html
 
-sudo usermod -a -G docker $USER
+sudo groupadd docker && sudo usermod -a -G docker $USER
 
 if [ ! -f ./docker/server.env ]
 then
@@ -61,7 +61,7 @@ cat ./docker/server.env
 
 cat wellcome.md && cd ..
 
-sudo rm -r metafox-5.0.1  systemctl reboot
+sudo rm -r systemctl reboot
 
 
 
