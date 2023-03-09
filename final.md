@@ -12,4 +12,7 @@ Now, you can start installing MetaFox with the Installation Wizard at
 
 
 ################################################################
-          #   #   #   #   #   #   #
+
+
+
+
