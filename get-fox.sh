@@ -49,11 +49,11 @@ sudo docker compose up -d
 
 #sudo docker compose exec frontend-build yarn bundle:release
 
-#if [[ -d ./source/frontend_web/app/dist ]] 
-#then
-#    rm -rf ./public_html/storage/app/web
-#    cp -rf ./source/frontend_web/app/dist ./public_html/storage/app/web
-#fi
+if [[ -d ./source/frontend_web/app/dist ]] 
+then
+    rm -rf ./public_html/storage/app/web
+    cp -rf ./source/frontend_web/app/dist ./public_html/storage/app/web
+fi
 
 # Final Info
 
@@ -61,7 +61,9 @@ cat ./docker/server.env
 
 cat wellcome.md && cd ..
 
-sudo rm ./upload.zip ./build-frontend.sh ./get-fox.sh ./docker-compose.yml
+cd metafox-5
+
+sudo rm upload.zip build-frontend.sh get-fox.sh .docker-compose.yml
 
 sudo systemctl reboot
 
