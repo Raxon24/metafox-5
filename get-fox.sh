@@ -59,9 +59,8 @@ fi
 
 cat ./docker/server.env
 
-cat wellcome.md && cd ..
+cat wellcome.md && cat final.md 
 
-cd metafox-5
 
 sudo rm upload.zip build-frontend.sh get-fox.sh docker-compose.yml metafox.sh wellcome.md
 
