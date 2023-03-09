@@ -15,7 +15,8 @@ RUN command bellow for 1 click install
 
 
 
-############################ Developers Instalations Guide ######################################################################################
+
+############################ Developers Instalations Guide ################################################
 
 
 # Installation Guide
