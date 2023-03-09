@@ -62,7 +62,7 @@ cat ./docker/server.env
 cat wellcome.md && cat final.md 
 
 
-sudo rm upload.zip build-frontend.sh get-fox.sh docker-compose.yml metafox.sh wellcome.md
+sudo rm upload.zip build-frontend.sh get-fox.sh docker-compose.yml metafox.sh wellcome.md final.md
 
 cd ..
 
