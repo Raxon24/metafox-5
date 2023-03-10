@@ -55,7 +55,9 @@ then
     cp -rf ./source/frontend_web/app/dist ./public_html/storage/app/web
 fi
 
-# Final Info
+# Install portainer
+
+sudo docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:lates# Final Info
 
 cat wellcome.md
 
