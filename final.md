@@ -11,3 +11,9 @@ Now, you can start installing MetaFox with the Installation Wizard at
 
 
 -----------------------------------------------------------------
+
+Now, you can use portainer at 
+
+       https://your_server_ip:9443
+               
+                     
