@@ -11,5 +11,5 @@ IMPORTANT  immediately edit Database user and password before run instalations W
 sudo nano metafox-5/docker/server.env
 
 
-      --------------------------------------------------------- 
+      ----------- DATABASE info need to EDIT  ------------------ 
       
