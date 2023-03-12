@@ -1,12 +1,9 @@
 #!/bin/bash
 
-sudo apt update & sudo apt upgrade
-
 #  Install needed PKG
 
 sudo apt install -y wget unzip nano curl ca-certificates gnupg lsb-release dirmngr gnupg gnupg-l10n gnupg-utils gpg gpg-agent gpg-wks-client
-  gpg-wks-server gpgconf gpgsm libassuan0 libksba8 libnpth0 pinentry-curses dbus-user-session pinentry-gnome3 tor parcimonie xloadimage scdaemon
-  pinentry-doc
+  gpg-wks-server gpgconf gpgsm libassuan0 libksba8 libnpth0 pinentry-curses dbus-user-session pinentry-gnome3 tor parcimonie xloadimage scdaemon pinentry-doc
 
 # Debian Bullseye 11 (stable)
 
@@ -22,10 +19,10 @@ curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o 
 sudo apt-get update
 
 sudo chmod a+r /etc/apt/keyrings/docker.gpg
+
 sudo apt-get update
 
 sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
-
 
 mkdir ./public_html
 
@@ -42,4 +39,3 @@ fi
 
 docker compose up -d
 
-cat ./docker/server.env
