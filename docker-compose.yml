@@ -29,7 +29,7 @@ services:
       - metafox-tier
   
   postgres:
-    image: foxsystem/postgres:13.2
+    image: foxsystem/postgres:latest
     restart: always
     env_file:
       - ./docker/server.env
